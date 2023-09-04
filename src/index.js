@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Header from './components/Header';
+import Feature from './components/Feature';
+import About from './components/About';
+import aboutimage from './components/images/about.png'
+import aboutimage1 from './components/images/download.jpeg'
+import Presentation from './components/Presentation';
+import Contact from './components/Contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <>
+  <Header/>
+  <Feature/>
+  <About image={aboutimage} title='Comes with All you need for Daily Life' button={'Get the App'}/>
+  <Presentation/>
+  <About image={aboutimage1} title='Download and Get the App now' button={'Download'}/>
+  <Contact/>
+  </>,
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
